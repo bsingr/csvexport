@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+	<title>demo of csvexport-widget</title>
+	<link rel="stylesheet" href="./demo.css" type="text/css" media="screen">
+	<script type="text/javascript" src="../vendor/jquery.min.js"></script>
+  <script type="text/javascript" src="../vendor/jquery.tablesorter.min.js"></script>
+  <script type="text/javascript" src="../lib/jquery.tablesorter.csvexport-0.1.js"></script>
+	<script type="text/javascript">
+	$(function() {
+    // apply tablesorter using the csvexport-widget
+    $(".tablesorter").tablesorter({
+      // use the csvexport-widget
+			widgets: ['csvexport'],
+      // config is optional:
+      csvExport: {
+       triggerEvent: 'click',
+       triggerEl: '.csvexport-button',
+       targetEl: '.csvexport-target',
+       seperator: ';'
+      }
+		})
+    
+  });
+  </script>
+</head>
+<body>
+<table class="tablesorter">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Major</th>
+			<th>Sex</th>
+			<th>English</th>
+			<th>Japanese</th>
+			<th>Calculus</th>
+			<th>Geometry</th>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<th>Name</th>
+			<th>Major</th>
+			<th>Sex</th>
+			<th>English</th>
+			<th>Japanese</th>
+			<th>Calculus</th>
+			<th>Geometry</th>
+		</tr>
+	</tfoot>
+	<tbody>
+		<tr>
+			<td>Student01</td>
+			<td>Languages</td>
+			<td>male</td>
+			<td>80</td>
+			<td>70</td>
+			<td>75</td>
+			<td>80</td>
+		</tr>
+		<tr>
+			<td>Student02</td>
+			<td>Mathematics</td>
+			<td>male</td>
+			<td>90</td>
+			<td>88</td>
+			<td>100</td>
+			<td>90</td>
+		</tr>
+		<tr>
+			<td>Student03</td>
+			<td>Languages</td>
+			<td>female</td>
+			<td>85</td>
+			<td>95</td>
+			<td>80</td>
+			<td>85</td>
+		</tr>
+		<tr>
+			<td>Student04</td>
+			<td>Languages</td>
+			<td>male</td>
+			<td>60</td>
+			<td>55</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+  </tbody>
+</table>
+
+<a href='#csvexport' name='csvexport' class='csvexport-button'>csvexport</a>
+<br/>
+<textarea class='csvexport-target' rows='10' cols='60'>
+</textarea>
+
+</body>
+</html>
