@@ -9,18 +9,19 @@
   <script type="text/javascript" src="../lib/jquery.tablesorter.csvexport-0.1.js"></script>
 	<script type="text/javascript">
 	$(function() {
+
     // apply tablesorter using the csvexport-widget
     $(".tablesorter").tablesorter({
       // use the csvexport-widget
 			widgets: ['csvexport'],
       // config is optional:
-      csvExport: {
-       triggerEvent: 'click',
-       triggerEl: '.csvexport-button',
-       targetEl: '.csvexport-target',
-       seperator: ';'
+      widgetcsvexport: {
+        triggerEvent: 'click',
+        triggerEl: '.csvexport-button',
+        targetEl: '.csvexport-target',
+        seperator: ';'
       }
-		})
+    });
     
   });
   </script>
