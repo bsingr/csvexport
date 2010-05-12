@@ -11,17 +11,11 @@
 	$(function() {
 
     // apply tablesorter using the csvexport-widget
-    $(".tablesorter").tablesorter({
-      // use the csvexport-widget
-			widgets: ['export_csv'],
-      // config is optional:
-      widgetcsvexport: {
-        triggerEvent: 'click',
-        triggerEl: '.export-csv-button',
-        targetEl: '.export-csv-target',
-        seperator: ';'
+    $(".tablesorter").tablesorter().tablesorterExportCsv(
+      {
+        container: $("#table_actions")
       }
-    });
+    );
     
   });
   </script>
@@ -90,10 +84,9 @@
   </tbody>
 </table>
 
-<a href='#csvexport' name='csvexport' class='export-csv-button'>export csv</a>
-<br/>
-<textarea class='export-csv-target' rows='10' cols='60'>
-</textarea>
+<div id="table_actions">
+  <a href='#csvexport' name='csvexport' class='export-csv-button'>export csv</a>
+</div>
 
 </body>
 </html>
