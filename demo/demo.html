@@ -13,12 +13,12 @@
     // apply tablesorter using the csvexport-widget
     $(".tablesorter").tablesorter({
       // use the csvexport-widget
-			widgets: ['csvexport'],
+			widgets: ['export_csv'],
       // config is optional:
       widgetcsvexport: {
         triggerEvent: 'click',
-        triggerEl: '.csvexport-button',
-        targetEl: '.csvexport-target',
+        triggerEl: '.export-csv-button',
+        targetEl: '.export-csv-target',
         seperator: ';'
       }
     });
@@ -90,9 +90,9 @@
   </tbody>
 </table>
 
-<a href='#csvexport' name='csvexport' class='csvexport-button'>csvexport</a>
+<a href='#csvexport' name='csvexport' class='export-csv-button'>export csv</a>
 <br/>
-<textarea class='csvexport-target' rows='10' cols='60'>
+<textarea class='export-csv-target' rows='10' cols='60'>
 </textarea>
 
 </body>
